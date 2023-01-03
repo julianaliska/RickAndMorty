@@ -1,0 +1,89 @@
+.titulo{
+    text-align: center;
+    color:#F2F2F2;
+    font-family: 'Unbounded', cursive;
+    font-weight: 900;
+    font-size: 250%;
+    
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+body {
+    text-align: center;
+    background-color: #000000;
+}
+
+.diretor {
+    color:#F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 90%;
+  
+}
+
+.feminino {
+    color:#F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 90%;
+    
+}
+
+.container {
+    display: inline-block;
+    padding: 20px;
+    border: 10px inset white;
+    border-radius: 20px;
+    border-width: 20px;
+    border-color: #6495ED;
+    cursor: pointer;
+    margin-bottom: 50px;
+    
+}
+
+.container2 {
+    display: inline-block;
+    border: 10px inset white;
+    padding: 26px;
+    border-radius: 20px;
+    border-width: 20px;
+    border-color: #6495ED;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.container:hover{
+    opacity: 0.2;
+    transition: 400ms;
+    border-radius: 20px;
+}
+
+.container2:hover{
+    opacity: 0.2;
+    transition: 400ms;
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0px; 
+    width: 100%; 
+    height: 60px; 
+    background-color: #ADFF2F;
+    font-family: 'Unbounded', cursive;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 60px; 
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;500&display=swap" rel="stylesheet">
+    <link href="desafio.css" rel="stylesheet">
+    <title>Desafio King - Juliana</title>
+    <meta charset="utf-8">
+    
+</head>
+
+<body>
+    <img class= "logo" src="Rick_and_Morty.png"
+        alt="Rick and Morty logo">
+    <h3 class="titulo">Desafio Rick and Morty</h3>
+
+
+    <div class="container"></div>
+    <div class="container2"></div>
+
+
+    <script>
+        
+        fetch('https://rickandmortyapi.com/api/character/?name=Agency Director', {
+            method: 'GET'
+        })
+        .then(response => response.json())
+        .then(function(json){
+
+            var container = document.querySelector('.container');
+
+            json.results.map(function(results){
+
+                container.innerHTML+=`
+                <div class ="diretor">
+                <img src= ` + results.image + `><br><br>
+                <strong> ` + results.name + ` </strong><br>
+                <strong> ` + results.status + ` </strong><br>
+                <strong> ` + results.origin.name + `</strong><br>
+                <strong> ` + results.episode + `</strong><br><br></div>
+                `;
+            })
+        })
+        
+        fetch('https://rickandmortyapi.com/api/character/?name=Arthricia&status=alive', {
+            method: 'GET'
+        })
+        .then(response => response.json())
+        .then(function(json){
+
+            var container2 = document.querySelector('.container2');
+
+            json.results.map(function(results2){
+
+                container2.innerHTML+=`
+                <div class="feminino">
+                <img src= ` + results2.image + `><br><br>
+                <strong> ` + results2.name + ` </strong><br>
+                <strong> ` + results2.status + ` </strong><br>
+                <strong> ` + results2.origin.name + `</strong><br>
+                <strong> ` + results2.episode + `</strong><br></div>
+                `;
+            })
+        })
+
+    </script>
+
+</body>
+
+<footer class="rodape">
+    <br>Desenvolvido por Juliana M. Liska
+</footer>
+</html>
